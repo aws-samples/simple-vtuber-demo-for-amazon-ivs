@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- HTML Meta Tags -->
+    <title>Simple VTuber Demo for Amazon IVS</title>
+    <!-- Amazon addition 11-08-2023 -->
+    <meta name="description" content="Simple VTuber Demo for Amazon IVS" />
+    <script src="https://web-broadcast.live-video.net/1.7.0/amazon-ivs-web-broadcast.js"></script>
+    <!-- End Amazon addition -->
+    
+    <!--     Basic Three.js -->
+    <script src="https://unpkg.com/three@0.133.0/build/three.js"></script>
+    <!--     GLTF Loader for Three.js -->
+    <script src="https://unpkg.com/three@0.133.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!--     Orbit Controls for Three.js -->
+    <script src="https://unpkg.com/three@0.133.0/examples/js/controls/OrbitControls.js"></script>
+    <!--     VRM Loader for Three.js -->
+    <script src="https://unpkg.com/@pixiv/three-vrm@0.6.7/lib/three-vrm.js"></script>
+    <!--     Mediapipe or Tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.5.1635989137/holistic.js" crossorigin="anonymous"></script>
+
+    <!--     Mediapipe Camera Tools -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <!--     Kalidokit Kinematic Solver -->
+    <script src="https://cdn.jsdelivr.net/npm/kalidokit@1.1/dist/kalidokit.umd.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Amazon addition 11-08-2023 -->
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+   
+    <link rel="stylesheet" href="modal.css" />
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
+    <!-- End Amazon addition -->
+
+  </head>
+  <body>
+    <div class="preview">
+      <video class="input_video" width="1280px" height="720px" autoplay muted playsinline></video>
+    </div>
+    <nav>
+      <button id="settings-btn" class="button-open"" class="button button-outline">Settings</button>
+      <button id="join-stage-btn" class="button button-outline">Join stage</button>
+    </nav>
+
+    <!-- Amazon addition 11-08-2023 -->
+    <section class="modal hidden">
+      <div>
+        <h3>Settings</h3>
+      </div>
+
+      <input type="text" id="participant-token" placeholder="Enter a participant token"  />
+      <button class="btn" id="submit-btn">Submit</button>
+    </section>
+    <div class="overlay hidden"></div>
+    <script src="app.js"></script>
+    <!-- End Amazon addition -->
+  </body>
+</html>
